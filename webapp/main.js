@@ -1,4 +1,4 @@
-const HOST = '127.0.0.1';
+const HOST = '192.168.0.2';
 const PORT = '3000';
 
 var express = require('express'),

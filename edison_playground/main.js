@@ -1,4 +1,4 @@
-const INTERVAL = 1000;
+const INTERVAL = 200;
 
 var broadcast = require('./broadcast.js'),
     sensor = require('./sensor.js');
@@ -11,6 +11,14 @@ function startSensorWatch() {
         broadcast.publishTemperature(sensor.getTemperatureValue());
     }, INTERVAL);
 }
+
+broadcast.onHandleColorInput = function (color) {
+    sensor.setLCDColor(color);
+};
+
+broadcast.onHandleTextInput = function (txt) {
+    sensor.setLCDText(txt);
+};
 
 broadcast.init();
 startSensorWatch();

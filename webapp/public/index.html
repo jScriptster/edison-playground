@@ -1,6 +1,24 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <script type="text/javascript" src="http://localhost:3000/mqtt.js"></script>
-    <script type="text/javascript" src="http://localhost:3000/main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 
-Hello World! Check your JS-console.
+<body>
+
+    <div class="userinputpanel jsUserinputpanel">
+        <div>
+            <input id="textInput" maxlength="16" placeholder="Deine Nachricht" class="text-input" />
+        </div>
+        <div>
+            <input id="colorInput" type="color" class="color-input" />
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/mqtt.js"></script>
+    <script type="text/javascript" src="/main.js"></script>
+</body>
+

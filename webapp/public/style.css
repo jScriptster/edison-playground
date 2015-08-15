@@ -1,0 +1,42 @@
+body {
+    background-color: #ff0000;
+}
+
+.userinputpanel {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    height: 200px;
+    background-color: rgba(33,33,33,0.7);
+    padding: 10px;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    -webkit-transform: translate(0,-300px);
+    -moz-transform: translate(0,-300px);
+    -o-transform: translate(0,-300px);
+    -ms-transform: translate(0,-300px);
+    transform: translate(0,-300px);
+}
+
+.userinputpanel--visible {
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+}
+
+.text-input {
+    font-size: 30px;
+    width: 97%;
+    padding: 1%;
+}
+
+.color-input {
+    margin-top: 20px;
+    width: 99%;
+    height: 50px;
+}
