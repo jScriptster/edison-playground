@@ -7,12 +7,22 @@
 
 <body>
 
+    <div class="outputbox outputbox--hidden">
+        <span class="jsTemperature">--</span>
+        <span>°C</span>
+    </div>
+
+    <div class="outputbox outputbox--hidden">
+        <span class="jsLight">--</span>
+        <span>lux</span>
+    </div>
+
     <div class="userinputpanel jsUserinputpanel">
         <div>
             <input id="textInput" maxlength="16" placeholder="Deine Nachricht" class="text-input" />
         </div>
         <div>
-            <input id="colorInput" type="color" class="color-input" />
+            <input id="colorInput" type="color" class="color-input" value="#000000" />
         </div>
     </div>
 

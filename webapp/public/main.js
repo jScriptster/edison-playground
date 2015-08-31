@@ -14,6 +14,8 @@
     client.on('connect', function () {
         console.log('connect');
 
+        $('.outputbox').removeClass('outputbox--hidden');
+
         client.subscribe(TOPIC_TEMPERATURE);
         client.subscribe(TOPIC_BUTTON);
         client.subscribe(TOPIC_ROTARY);
@@ -32,6 +34,12 @@
             break;
         case TOPIC_ROTARY:
             handleRotary(value.toString());
+            break;
+        case TOPIC_LIGHT:
+            handleLight(value.toString());
+            break;
+        case TOPIC_TEMPERATURE:
+            handleTemperature(value.toString());
             break;
         }
     });
@@ -68,6 +76,23 @@
             color = 'rgb(' + valueSimplified + ',' + valueSimplified + ',' + valueSimplified + ')';
 
         $('body').css('background-color', color);
+    }
+
+    function handleTemperature(value) {
+        var output,
+            valueFloat = parseFloat(value);
+        valueFloat = Math.round(valueFloat * 10) / 10;
+
+        output = valueFloat.toString();
+        if (output.indexOf('.') === -1) {
+            output = output + '.0';
+        }
+
+        $('.jsTemperature').html(output);
+    }
+
+    function handleLight(value) {
+        $('.jsLight').html(value);
     }
 
 

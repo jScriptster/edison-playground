@@ -40,3 +40,16 @@ body {
     width: 99%;
     height: 50px;
 }
+
+.outputbox {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    color: #0b97c4;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.outputbox--hidden {
+    display: none;
+}
