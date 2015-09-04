@@ -46,7 +46,10 @@
 
     $('#colorInput').on('change', function (e) {
         var jCurrentTarget = $(e.currentTarget);
-        client.publish(TOPIC_COLOR_INPUT, jCurrentTarget.val());
+
+        if (jCurrentTarget.is(':valid')) {
+            client.publish(TOPIC_COLOR_INPUT, jCurrentTarget.val());
+        }
     });
 
     $('#textInput').on('change', function (e) {
